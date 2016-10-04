@@ -8,6 +8,7 @@ namespace MVCWebApp.Models
 {
     public class MVCWebAppDbContext : DbContext
     {
+        public DbSet<Destination> Destinations { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
             options.UseSqlServer(@"Server=(localdb)\MSSQLLocalDB;Database=MVCWebApp;Trusted_Connection=True;MultipleActiveResultSets=true");
